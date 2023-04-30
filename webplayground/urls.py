@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from pages.urls import pages_patterns
 from django.conf import settings
+from messenger.urls import messenger_patterns
 
 urlpatterns = [
     path('', include('core.urls')),
@@ -26,6 +27,7 @@ urlpatterns = [
     # Auth paths    
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('registration.urls')),
+    path('messenger/', include(messenger_patterns)),
 ]
 
 if settings.DEBUG:

@@ -22,7 +22,7 @@
                 {% endif %}
                 <p class="profile-data">
                   <b>{{profile.user|truncatechars:"16"}}</b><br>
-                  <a href="{% url 'profile-detail' profile.user %}">Ver perfil</a>
+                  <a href="{% url 'profiles:detail' profile.user.username %}">Ver perfil</a>
                 </p>
               </div>
             </div>
